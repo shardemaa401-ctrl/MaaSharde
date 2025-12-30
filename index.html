@@ -1,598 +1,440 @@
 <!DOCTYPE html>
-<html lang="hi">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saraswati Puja 2025 Donation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saraswati Puja 2025 | Premium Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- 1. CORE VARIABLES & RESET --- */
+        :root {
+            --primary: #ff9f43; /* Saffron Orange */
+            --accent: #feca57; /* Gold */
+            --dark: #222f3e;
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --neon-glow: 0 0 15px rgba(255, 159, 67, 0.6);
+            --text-light: #ffffff;
+        }
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rozha+One&family=Baloo+2:wght@500;700&display=swap"
-    rel="stylesheet">
-  <style>
-    /* --- CSS STYLES --- */
-    :root {
-      --primary: #ff8800;
-      /* Deep Orange */
-      --yellow: #ffcc00;
-      --white: #ffffff;
-      --bg-glass: rgba(255, 255, 255, 0.95);
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', 'Baloo 2', sans-serif;
-      background: url('https://images.pexels.com/photos/4855370/pexels-photo-4855370.jpeg') no-repeat center center;
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #000;
+            color: var(--text-light);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
 
-      background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        /* --- 2. CINEMATIC BACKGROUND --- */
+        .bg-fixed {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2;
+            background: url('https://w0.peakpx.com/wallpaper/1001/47/HD-wallpaper-saraswati-devi-veena-god-hindu-lotus-music.jpg') no-repeat center center/cover;
+            animation: zoomBreath 20s infinite alternate;
+        }
+        
+        .bg-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+            z-index: -1;
+            backdrop-filter: blur(3px);
+        }
 
-    /* Overlay to make text readable */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      /* Dark overlay */
-      z-index: -1;
-    }
+        @keyframes zoomBreath {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
 
-    /* --- HEADER --- */
-    .welcome-header {
-      text-align: center;
-      color: var(--white);
-      margin-top: 20px;
-      animation: fadeIn 1.5s ease;
-    }
+        /* --- 3. HERO SECTION WITH SVG --- */
+        .hero {
+            text-align: center;
+            padding: 40px 20px 0 20px;
+            position: relative;
+        }
 
-    .welcome-header h1 {
-      font-family: 'Rozha One', serif;
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-      color: var(--yellow);
-      text-shadow: 2px 2px 4px #000;
-    }
+        .title-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), #ff6b6b);
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            box-shadow: var(--neon-glow);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    .welcome-header p {
-      font-size: 1.2rem;
-      color: #fff;
-    }
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            background: linear-gradient(to right, #fff, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
 
-    /* --- MAIN CONTAINER (Split Layout) --- */
-    .main-container {
-      display: flex;
-      flex-wrap: wrap;
-      width: 90%;
-      max-width: 1000px;
-      margin: 30px auto;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      animation: slideUp 1s ease;
-    }
+        /* SVG Wave Divider */
+        .wave-container {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 0;
+        }
+        .wave-svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+        .shape-fill { fill: rgba(255, 255, 255, 0.05); }
 
-    /* Left Side: Image & Mantra */
-    .side-content {
-      flex: 1;
-      background: linear-gradient(135deg, rgba(255, 136, 0, 0.9), rgba(255, 51, 51, 0.9));
-      padding: 40px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-width: 300px;
-    }
+        /* --- 4. MAIN CARD (Glassmorphism) --- */
+        .main-card {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            width: 90%;
+            max-width: 500px;
+            margin: 40px auto;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 10;
+            animation: floatUp 1s ease-out;
+        }
 
-    .side-content img {
-      width: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
-    }
+        @keyframes floatUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    .mantra {
-      font-style: italic;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 15px;
-      border-radius: 10px;
-      border-left: 4px solid var(--yellow);
-    }
+        /* Input Styles */
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #ccc; letter-spacing: 1px; }
+        
+        .modern-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Outfit', sans-serif;
+            transition: 0.3s all;
+        }
 
-    /* Right Side: Form */
-    .form-content {
-      flex: 1;
-      background: var(--bg-glass);
-      padding: 40px;
-      min-width: 300px;
-    }
+        .modern-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(255, 159, 67, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-    h2 {
-      color: #d35400;
-      margin-top: 0;
-    }
+        /* Buttons with Animation */
+        .btn-glow {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(90deg, var(--primary), #e17055);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .btn-glow:hover { transform: translateY(-3px); box-shadow: 0 0 25px var(--primary); }
+        
+        /* --- 5. QR & WARNING SECTION --- */
+        .qr-wrapper {
+            display: none;
+            text-align: center;
+        }
+        
+        .qr-frame {
+            position: relative;
+            padding: 10px;
+            background: linear-gradient(45deg, var(--primary), transparent, var(--primary));
+            border-radius: 15px;
+            display: inline-block;
+            animation: borderRotate 2s linear infinite;
+        }
 
-    .input-group {
-      margin-bottom: 15px;
-      text-align: left;
-    }
+        .qr-img {
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            border-radius: 10px;
+            /* Put your QR Code URL Here */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg');
+            background-size: cover;
+        }
 
-    .input-group label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #333;
-    }
+        .scam-alert {
+            margin-top: 20px;
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid #e74c3c;
+            color: #ff6b6b;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            animation: pulseRed 2s infinite;
+        }
 
-    .input-group input {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
+        @keyframes pulseRed { 0% {box-shadow: 0 0 0 0 rgba(231,76,60, 0.4);} 70% {box-shadow: 0 0 0 10px rgba(231,76,60, 0);} 100% {box-shadow: 0 0 0 0 rgba(231,76,60, 0);} }
 
-    .input-group input:focus {
-      border-color: var(--primary);
-      outline: none;
-    }
+        /* --- 6. DIGITAL RECEIPT (RASHID) --- */
+        .receipt-container {
+            display: none;
+            background: #fff;
+            color: #333;
+            padding: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            position: relative;
+        }
 
-    .btn-main {
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(to right, #ff8800, #ff5500);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+        .rec-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
 
-    .btn-main:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
-    }
+        /* Floating Corner Images on Receipt */
+        .corner-god {
+            position: absolute;
+            width: 50px; height: 50px;
+            border-radius: 50%; border: 2px solid white;
+            object-fit: cover;
+        }
+        .cg-left { bottom: -25px; left: 20px; }
+        .cg-right { bottom: -25px; right: 20px; }
 
-    /* --- MEMORIES SECTION (Animated) --- */
-    .memories-section {
-      width: 90%;
-      max-width: 950px;
-      margin: 20px auto;
-      background: linear-gradient(45deg, #1e3c72, #2a5298);
-      color: white;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(42, 82, 152, 0.6);
-      animation: pulse 3s infinite;
-    }
+        .rec-body { padding: 40px 20px 20px 20px; }
 
-    .memories-btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: white;
-      color: #1e3c72;
-      padding: 10px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 25px;
-    }
+        .rec-row {
+            display: flex; justify-content: space-between;
+            border-bottom: 1px dashed #ddd;
+            padding: 10px 0; font-size: 0.9rem;
+        }
+        .rec-row strong { color: var(--dark); }
 
-    /* --- QR CODE SECTION --- */
-    #qr-section {
-      display: none;
-      text-align: center;
-      margin-top: 20px;
-    }
+        .rec-total {
+            background: #f1f2f6;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
 
-    .qr-box {
-      border: 3px dashed var(--primary);
-      padding: 10px;
-      display: inline-block;
-      background: white;
-      border-radius: 10px;
-    }
+        .rec-footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #777;
+            padding-bottom: 15px;
+        }
 
-    .qr-img {
-      width: 200px;
-      height: 200px;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg');
-      /* Replace with your QR */
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+        /* --- 7. MEMORIES SECTION --- */
+        .memories-box {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+        }
+        .drive-btn {
+            background: rgba(255,255,255,0.1);
+            color: #4285F4;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            border: 1px solid rgba(66, 133, 244, 0.3);
+        }
+        .drive-btn:hover { background: rgba(66, 133, 244, 0.2); }
 
-    .warning-text {
-      color: red;
-      font-weight: bold;
-      background: #ffe6e6;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 10px;
-      border: 1px solid red;
-      font-size: 14px;
-    }
-
-    /* --- RECEIPT (Rashid) --- */
-    #receipt-card {
-      display: none;
-      background: #fff;
-      width: 90%;
-      max-width: 500px;
-      margin: 20px auto;
-      padding: 30px;
-      border: 10px double var(--primary);
-      position: relative;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Two Corner Images */
-    .corner-img {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid var(--primary);
-    }
-
-    .top-left {
-      top: 10px;
-      left: 10px;
-    }
-
-    .top-right {
-      top: 10px;
-      right: 10px;
-    }
-
-    .receipt-header h2 {
-      color: var(--primary);
-      margin: 30px 0 5px 0;
-      font-size: 24px;
-    }
-
-    .thank-you {
-      font-size: 18px;
-      color: green;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .details-table {
-      width: 100%;
-      text-align: left;
-      margin-top: 10px;
-      border-collapse: collapse;
-    }
-
-    .details-table td {
-      padding: 8px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .details-table tr:last-child td {
-      border-bottom: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: #d35400;
-    }
-
-    .receipt-note {
-      font-size: 12px;
-      color: #555;
-      margin-top: 15px;
-      font-style: italic;
-    }
-
-    .action-buttons {
-      margin-top: 20px;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .btn-small {
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      color: white;
-      font-size: 14px;
-    }
-
-    .btn-pdf {
-      background: #333;
-    }
-
-    .btn-wa {
-      background: #25D366;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.02);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-      .main-container {
-        flex-direction: column;
-      }
-
-      .side-content {
-        padding: 20px;
-      }
-
-      .welcome-header h1 {
-        font-size: 2rem;
-      }
-
-      .form-content {
-        flex: 1;
-        background: var(--bg-glass);
-        padding: 15px;
-        min-width: 300px;
-      }
-    .memories-section {
-    width: 90%;
-    max-width: 350px;
-    /* margin: 20px auto;
-    background: linear-gradient(45deg, #1e3c72, #2a5298);
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(42, 82, 152, 0.6);
-    animation: pulse 3s infinite;
-    */
-    } 
-  }
-  </style>
+    </style>
 </head>
-
 <body>
 
-  <div class="overlay"></div>
+    <div class="bg-fixed"></div>
+    <div class="bg-overlay"></div>
 
-  <div class="welcome-header">
-    <h1>🙏 जय माँ शारदे 🙏</h1>
-    <p>Saraswati Puja Mahotsav 2026</p>
-  </div>
-
-  <div class="main-container">
-
-    <div class="side-content">
-      <img src="https://images.pexels.com/photos/20328401/pexels-photo-20328401.jpeg" alt="Mata">
-      <h3>|| सरस्वती वंदना ||</h3>
-      <div class="mantra">
-        "या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता<br>
-        या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना।<br>
-        या ब्रह्माच्युतशंकरप्रभृतिभिर्देवैः सदा पूजिता<br>
-        सा मां पातु सरस्वती भगवती निःशेषजाड्यापहा॥"
-      </div>
+    <div class="hero">
+        <span class="title-badge">SKR College Presents</span>
+        <h1>Saraswati Puja</h1>
+        <p style="color: #ddd; letter-spacing: 1px;">Online Donation Portal 2025</p>
+        
+        <div class="wave-container">
+            <svg class="wave-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </div>
 
-    <div class="form-content" id="payment-form">
-      <h2>चंदा / डोनेशन फॉर्म</h2>
-      <p>कृपया अपनी जानकारी भरें:</p>
+    <div class="main-card">
+        
+        <div id="step-form">
+            <h2 style="text-align: center; margin-bottom: 20px; font-family: 'Cinzel', serif;">Devotee Details</h2>
+            
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="modern-input" id="inp-name" placeholder="Ex: Rahul Kumar">
+            </div>
 
-      <div class="input-group">
-        <label>पूरा नाम (Full Name):</label>
-        <input type="text" id="name" placeholder="Raushan Kumar" required>
-      </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" class="modern-input" id="inp-roll" placeholder="Ex: BCA-24">
+            </div>
 
-      <div class="input-group">
-        <label>ईमेल (Email):</label>
-        <input type="email" id="email" placeholder="raushan@example.com">
-      </div>
+            <div class="form-group">
+                <label>Donation Amount (₹)</label>
+                <input type="number" class="modern-input" id="inp-amount" placeholder="Ex: 101, 251, 501">
+            </div>
 
-      <div class="input-group">
-        <label>पता(Address):</label>
-        <input type="text" id="Address" placeholder="Belao,Barbigha">
-      </div>
+            <button class="btn-glow" onclick="goToQR()">Next Step &rarr;</button>
+        </div>
 
-      <div class="input-group">
-        <label>राशि (Amount ₹):</label>
-        <input type="number" id="amount" placeholder="₹ 101, 251, 501..." required>
-      </div>
+        <div id="step-qr" class="qr-wrapper">
+            <h2 style="margin-bottom: 10px;">Scan to Pay</h2>
+            <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 20px;">Use GPay, PhonePe or Paytm</p>
 
-      <button class="btn-main" onclick="showQR()">Next: Pay Money ➔</button>
+            <div class="qr-frame">
+                <div class="qr-img"></div>
+            </div>
+
+            <div class="scam-alert">
+                ⚠️ <strong>WARNING:</strong> Fake Payment Screens will be rejected. Receipt is only valid after admin verification.
+            </div>
+
+            <br>
+            <button class="btn-glow" style="background: linear-gradient(90deg, #27ae60, #2ecc71);" onclick="generateReceipt()">I Have Paid (Generate Receipt)</button>
+            <br><br>
+            <button onclick="location.reload()" style="background:none; border:none; color:#777; cursor:pointer; text-decoration:underline;">Cancel</button>
+        </div>
+
+        <div id="step-receipt" class="receipt-container">
+            <div class="rec-header">
+                <h3 style="margin:0; font-family: 'Cinzel';">PAYMENT RECEIPT</h3>
+                <small>Saraswati Puja Samiti</small>
+                
+                <img src="https://w0.peakpx.com/wallpaper/705/560/HD-wallpaper-saraswati-mata-god-hindu-thumbnail.jpg" class="corner-god cg-left">
+                <img src="https://media.tenor.com/MbfC4M7fJ1IAAAAj/om-symbol.gif" class="corner-god cg-right">
+            </div>
+
+            <div class="rec-body">
+                <div style="text-align: center; color: var(--primary); margin-bottom: 15px; font-weight: bold;">
+                    Thank You! Payment Recorded.
+                </div>
+
+                <div class="rec-row"><span>Receipt ID:</span> <strong id="out-id">#SAR-000</strong></div>
+                <div class="rec-row"><span>Date:</span> <span id="out-date">--</span></div>
+                <div class="rec-row"><span>Time:</span> <span id="out-time">--</span></div>
+                <div class="rec-row"><span>Name:</span> <strong id="out-name">--</strong></div>
+                <div class="rec-row"><span>Address:</span> <span id="out-roll">--</span></div>
+
+                <div class="rec-total">
+                    TOTAL: <span id="out-amount">₹ 0</span> <span style="font-size:0.8rem; vertical-align: middle;">(PAID)</span>
+                </div>
+            </div>
+
+            <div class="rec-footer">
+                * This is a computer generated receipt.<br>Please save for verification.
+            </div>
+
+            <div style="padding: 10px; display: flex; gap: 10px;">
+                <button class="btn-glow" style="font-size: 0.9rem; background: #333;" onclick="window.print()">📥 PDF</button>
+                <button class="btn-glow" style="font-size: 0.9rem; background: #25D366;" onclick="sendWhatsapp()">💬 WhatsApp</button>
+            </div>
+        </div>
+
+        <div class="memories-box">
+            <p style="margin-bottom: 10px; font-size: 0.9rem;">View Last Year's 8K Photos</p>
+            <a href="https://drive.google.com/drive/my-drive" target="_blank" class="drive-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Open Google Drive Gallery
+            </a>
+        </div>
+
     </div>
 
-    <div class="form-content" id="qr-section">
-      <h2>Scan & Pay</h2>
-      <div class="qr-box">
-        <div class="qr-img"></div>
-      </div>
+    <script>
+        /* --- LOGIC --- */
 
-      <p>Scan with PhonePe, Paytm, GPay</p>
+        function goToQR() {
+            const name = document.getElementById('inp-name').value;
+            const amt = document.getElementById('inp-amount').value;
 
-      <div class="warning-text">
-        ⚠️ <strong>NOTE:</strong> कृपया Fake Payment या Scam न करें। रसीद चेक की जाएगी, तभी मान्य (Valid) होगी।
-      </div>
+            if(!name || !amt) {
+                alert("Please fill in Name and Amount");
+                return;
+            }
 
-      <br>
-      <button class="btn-main" style="background: #27ae60;" onclick="generateReceipt()">I Have Paid (भुगतान कर
-        दिया)</button>
-      <br><br>
-      <button onclick="location.reload()"
-        style="background:none; border:none; color:red; cursor:pointer;">Cancel</button>
-    </div>
-  </div>
+            // Animation Transition
+            document.getElementById('step-form').style.display = 'none';
+            document.getElementById('step-qr').style.display = 'block';
+            document.getElementById('step-qr').style.animation = "floatUp 0.5s ease";
+        }
 
-  <div class="memories-section">
-    <h3>✨ पुरानी यादें (Memories) ✨</h3>
-    <p>Saraswati Puja 2024 की कुछ खूबसूरत तस्वीरें और वीडियो।</p>
-    <a href="https://drive.google.com/drive/folders/1GEttDuku-rELD1Q2o-N3Ii6qpBnxAtcg?usp=sharing" target="_blank" class="memories-btn">📂 Open Gallery (Google Drive)</a>
-  </div>
+        function generateReceipt() {
+            // Get Data
+            const name = document.getElementById('inp-name').value;
+            const roll = document.getElementById('inp-roll').value || "N/A";
+            const amt = document.getElementById('inp-amount').value;
+            
+            const now = new Date();
+            const rid = "SAR-" + Math.floor(Math.random() * 9999);
 
-  <div id="receipt-card">
-    <img src="https://images.pexels.com/photos/30273587/pexels-photo-30273587.jpeg" class="corner-img top-left" alt="Om">
-    <img src="https://w0.peakpx.com/wallpaper/705/560/HD-wallpaper-saraswati-mata-god-hindu-thumbnail.jpg"
-      class="corner-img top-right" alt="Mata">
+            // Set Data
+            document.getElementById('out-name').innerText = name;
+            document.getElementById('out-roll').innerText = roll;
+            document.getElementById('out-amount').innerText = "₹ " + amt;
+            document.getElementById('out-id').innerText = rid;
+            document.getElementById('out-date').innerText = now.toLocaleDateString();
+            document.getElementById('out-time').innerText = now.toLocaleTimeString();
 
-    <div class="receipt-header">
-      <h2>Donation Receipt</h2>
-      <p>Saraswati Puja Samiti, Barbigha</p>
-    </div>
+            // Transition
+            document.getElementById('step-qr').style.display = 'none';
+            document.getElementById('step-receipt').style.display = 'block';
+            document.getElementById('step-receipt').style.animation = "floatUp 0.5s ease";
+            
+            // Hide Memories Section to focus on receipt
+            document.querySelector('.memories-box').style.display = 'none';
+        }
 
-    <div class="thank-you" id="thank-text">Thank You, Name!</div>
+        function sendWhatsapp() {
+            const ownerPhone = "919999999999"; // Change this
+            const name = document.getElementById('out-name').innerText;
+            const amt = document.getElementById('out-amount').innerText;
+            const rid = document.getElementById('out-id').innerText;
 
-    <table class="details-table">
-      <tr>
-        <td>Receipt No:</td>
-        <td id="r-id">12345</td>
-      </tr>
-      <tr>
-        <td>Date:</td>
-        <td id="r-date">01/01/2000</td>
-      </tr>
-      <tr>
-        <td>Time:</td>
-        <td id="r-time">1:00 AM</td>
-      </tr>
-      <tr>
-        <td>Name:</td>
-        <td id="r-name">Raushan</td>
-      </tr>
-      <tr>
-        <td>Address No:</td>
-        <td id="r-Address">belao</td>
-      </tr>
-      <tr>
-        <td>Email:</td>
-        <td id="r-email">raushan@ex.com</td>
-      </tr>
-      <tr>
-        <td><strong>Amount Paid:</strong></td>
-        <td><strong id="r-amount">₹ 501</strong></td>
-      </tr>
-    </table>
-
-    <div class="receipt-note">
-      Note: पेमेंट का स्क्रीनशॉट या यह PDF सेव करें और WhatsApp पर भेजें।
-    </div>
-
-    <div class="action-buttons">
-      <button class="btn-small btn-pdf" onclick="window.print()">📥 Save PDF</button>
-      <button class="btn-small btn-wa" onclick="sendWhatsapp()">💬 Send on WhatsApp</button>
-    </div>
-  </div>
-
-  <br><br>
-
-  <script>
-    // --- JAVASCRIPT ---
-
-    function showQR() {
-      var name = document.getElementById('name').value;
-      var amount = document.getElementById('amount').value;
-
-      if (name === "" || amount === "") {
-        alert("कृपया नाम और राशि (Amount) भरें!");
-        return;
-      }
-      // Hide Form, Show QR
-      document.getElementById('payment-form').style.display = 'none';
-      document.getElementById('qr-section').style.display = 'block';
-    }
-
-    function generateReceipt() {
-      // Get Values
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value || "-";
-      var Address = document.getElementById('Address').value || "-";
-      var amount = document.getElementById('amount').value;
-
-      var now = new Date();
-      var dateStr = now.toLocaleDateString();
-      var timeStr = now.toLocaleTimeString();
-      var recId = "REC-" + Math.floor(Math.random() * 90000);
-
-      // Set Receipt Data
-      document.getElementById('thank-text').innerText = "धन्यवाद, " + name + " जी! 🙏";
-      document.getElementById('r-name').innerText = name;
-      document.getElementById('r-email').innerText = email;
-      document.getElementById('r-Address').innerText = Address;
-      document.getElementById('r-amount').innerText = "₹ " + amount;
-      document.getElementById('r-date').innerText = dateStr;
-      document.getElementById('r-time').innerText = timeStr;
-      document.getElementById('r-id').innerText = recId;
-
-      // Hide Main Container, Show Receipt
-      document.querySelector('.main-container').style.display = 'none';
-      document.querySelector('.memories-section').style.display = 'none';
-      document.getElementById('receipt-card').style.display = 'block';
-
-      // Scroll to top
-      window.scrollTo(0, 0);
-    }
-
-    function sendWhatsapp() {
-      // यहाँ ओनर का नंबर बदलें
-      var ownerNumber = "8851223389";
-
-      var name = document.getElementById('r-name').innerText;
-      var amount = document.getElementById('r-amount').innerText;
-      var Address = document.getElementById('r-Address').innerText;
-      var id = document.getElementById('r-id').innerText;
-
-      var msg = `*Jay Maa Saraswati* 🙏%0A%0AHere is my Donation:%0A*Name:* ${name}%0A*Address:* ${Address}%0A*Amount:* ${amount}%0A*Receipt No:* ${id}%0A%0APlease check and confirm.`;
-
-      window.open(`https://wa.me/${ownerNumber}?text=${msg}`, '_blank');
-    }
-  </script>
-
+            const text = `*Jay Maa Saraswati* 🙏%0A%0AHere is my payment:%0A*Name:* ${name}%0A*Amount:* ${amt}%0A*ID:* ${rid}%0A%0APlease verify.`;
+            
+            window.open(`https://wa.me/${ownerPhone}?text=${text}`, '_blank');
+        }
+    </script>
 </body>
-
 </html>
